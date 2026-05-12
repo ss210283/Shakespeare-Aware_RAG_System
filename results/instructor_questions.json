@@ -1,0 +1,32 @@
+[
+  {
+    "question_id": "Q1",
+    "question": "Why does Macbeth kill Duncan?",
+    "expected_focus": "Ambition, prophecy, Lady Macbeth's influence, and Macbeth's decision to seize power.",
+    "type": "contextual_qa"
+  },
+  {
+    "question_id": "Q2",
+    "question": "Who is Hamlet?",
+    "expected_focus": "Prince of Denmark, son of the murdered king, central figure in revenge plot.",
+    "type": "concept_explanation"
+  },
+  {
+    "question_id": "Q3",
+    "question": "What is the conflict between the Montagues and the Capulets?",
+    "expected_focus": "Long-standing family feud in Romeo and Juliet.",
+    "type": "concept_explanation"
+  },
+  {
+    "question_id": "Q4",
+    "question": "Why does Hamlet delay taking revenge?",
+    "expected_focus": "Uncertainty, moral hesitation, need for proof, philosophical reflection.",
+    "type": "contextual_qa"
+  },
+  {
+    "question_id": "Q5",
+    "question": "Generate a short Shakespearean-style response from Juliet explaining her conflict after meeting Romeo.",
+    "expected_focus": "Creative stylised output; conflict between love for Romeo and family loyalty.",
+    "type": "stylised_generation"
+  }
+]
