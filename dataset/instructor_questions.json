@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "play": "Macbeth",
+      "question": "Why does Macbeth kill Duncan?",
+      "expected_focus": "Macbeth’s ambition, the witches’ prophecy, Duncan as an obstacle, and Lady Macbeth’s pressure. Useful evidence may come from Acts 1–2."
+    },
+    {
+      "id": "Q2",
+      "play": "Macbeth",
+      "question": "How does Macbeth change after becoming king?",
+      "expected_focus": "He becomes increasingly fearful, violent, paranoid, and tyrannical; relevant evidence includes Banquo’s murder, the banquet, and later acts."
+    },
+    {
+      "id": "Q3",
+      "play": "Hamlet",
+      "question": "Why does Hamlet delay taking revenge?",
+      "expected_focus": "Uncertainty, moral hesitation, need to test Claudius’s guilt, and reflective temperament; use evidence from the ghost scene, the play-within-a-play, and prayer scene."
+    },
+    {
+      "id": "Q4",
+      "play": "Hamlet",
+      "question": "What is Ophelia’s role in the tragedy?",
+      "expected_focus": "Ophelia is caught between Hamlet, Polonius, Laertes, and court politics; her distress and death reveal the human cost of revenge and manipulation."
+    },
+    {
+      "id": "Q5",
+      "play": "Romeo and Juliet",
+      "question": "Why is Juliet conflicted after Romeo kills Tybalt?",
+      "expected_focus": "Juliet loves Romeo but Tybalt is her kinsman; she must reconcile romantic loyalty with family loyalty."
+    },
+    {
+      "id": "Q6",
+      "play": "Romeo and Juliet",
+      "question": "How does the family feud shape the tragedy?",
+      "expected_focus": "The feud creates violence, secrecy, pressure, miscommunication, and ultimately the conditions for the lovers’ deaths."
+    }
+  ]
+}
