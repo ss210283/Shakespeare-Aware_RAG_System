@@ -1,5 +1,13 @@
+# Data & Evaluation
 numpy
 pandas
 scikit-learn
-sentence-transformers
 tqdm
+
+# Retrieval / Embedding
+sentence-transformers
+
+# Local LLM
+torch
+transformers
+accelerate
