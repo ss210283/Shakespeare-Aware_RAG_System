@@ -45,7 +45,7 @@ class EmbeddingRetriever:
             raise ValueError("No chunks supplied to build_index().")
 
         self.chunks = chunks
-        texts = [chunk["text"] for chunk in chunks]
+        texts = [chunk.get("embed_text") or chunk["text"] for chunk in chunks]
         self.embeddings = np.asarray(self.model.encode(texts, show_progress_bar=True))
 
     def retrieve(self, query: str, top_k: int = 3) -> List[Tuple[Chunk, float]]:

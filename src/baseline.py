@@ -8,7 +8,8 @@ import torch
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-MODEL_PATH = Path(__file__).resolve().parents[1] / "model" / "qwen2.5-1.5b-instruct"
+_LOCAL_MODEL_PATH = Path(__file__).resolve().parents[1] / "model" / "qwen2.5-1.5b-instruct"
+MODEL_NAME = str(_LOCAL_MODEL_PATH) if _LOCAL_MODEL_PATH.exists() else "Qwen/Qwen2.5-1.5B-Instruct"
 PROMPT_PATH = (
     Path(__file__).resolve().parents[1] / "prompts" / "baseline_system_prompt.txt"
 )
@@ -18,7 +19,7 @@ class BaselineSystem:
 
     def __init__(
         self,
-        model_path: Path = MODEL_PATH,
+        model_path: str = MODEL_NAME,
         prompt_path: Path = PROMPT_PATH,
     ):
         self.tokenizer, self.model = self._load_model_and_tokenizer(model_path)
@@ -70,7 +71,7 @@ class BaselineSystem:
         return self.tokenizer.decode(generated_tokens, skip_special_tokens=True)
 
     @staticmethod
-    def _load_model_and_tokenizer(model_path: Path):
+    def _load_model_and_tokenizer(model_path: str):
         tokenizer = AutoTokenizer.from_pretrained(model_path)
         model = AutoModelForCausalLM.from_pretrained(
             model_path,

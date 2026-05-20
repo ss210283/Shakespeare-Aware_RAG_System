@@ -46,9 +46,9 @@ def _extract_records(obj: Any) -> List[Record]:
     )
 
 
-def load_json_records(path: Path) -> List[Record]:
+def load_jsonl_records(path: Path) -> List[Record]:
     """
-    Load one processed Shakespeare JSON file.
+    Load one processed Shakespeare JSONL file (one JSON object per line).
     """
     if not path.exists():
         raise FileNotFoundError(
@@ -56,11 +56,8 @@ def load_json_records(path: Path) -> List[Record]:
             "Place the provided dataset files in data/processed/."
         )
 
-    with path.open("r", encoding="utf-8") as f:
-        obj = json.load(f)
-
-    records = _extract_records(obj)
-    return records
+    with path.open("r", encoding="utf-8") as file_handle:
+        return [json.loads(line) for line in file_handle if line.strip()]
 
 
 def load_all_plays() -> List[Record]:
@@ -70,7 +67,7 @@ def load_all_plays() -> List[Record]:
     all_records: List[Record] = []
 
     for play_key, path in PLAY_FILES.items():
-        records = load_json_records(path)
+        records = load_jsonl_records(path)
         for r in records:
             r.setdefault("play_key", play_key)
         all_records.extend(records)
@@ -81,5 +78,7 @@ def load_all_plays() -> List[Record]:
 if __name__ == "__main__":
     records = load_all_plays()
     print(f"Loaded {len(records)} records.")
-    print("First record:")
+    print("First three records:")
     print(json.dumps(records[0], indent=2, ensure_ascii=False))
+    print(json.dumps(records[1], indent=2, ensure_ascii=False))
+    print(json.dumps(records[2], indent=2, ensure_ascii=False))

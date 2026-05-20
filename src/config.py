@@ -12,12 +12,12 @@ PROMPT_DIR = PROJECT_ROOT / "prompts"
 RESULTS_DIR = PROJECT_ROOT / "results"
 
 PLAY_FILES = {
-    "hamlet": DATA_DIR / "hamlet.json",
-    "macbeth": DATA_DIR / "macbeth.json",
-    "romeo_and_juliet": DATA_DIR / "romeo_and_juliet.json",
+    "hamlet": DATA_DIR / "hamlet_speaker_turn_chunks.jsonl",
+    "macbeth": DATA_DIR / "macbeth_speaker_turn_chunks.jsonl",
+    "romeo_and_juliet": DATA_DIR / "romeo_and_juliet_speaker_turn_chunks.jsonl",
 }
 
-DEFAULT_TOP_K = 3
+DEFAULT_TOP_K = 8
 
 # Suggested lightweight embedding model.
 # Students may change this and justify the choice in the report.
