@@ -3,7 +3,3 @@ model/
 __pycache__/
 *.pyc
 .DS_Store
-*.npy
-chunks_meta.json
-chunks.jsonl
-scene_lookup.json
