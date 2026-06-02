@@ -1,0 +1,50 @@
+[
+  {
+    "question_id": "Q6",
+    "question": "Who is the president of Australia?",
+    "expected_focus": "Out-of-scope question; system should decline to answer.",
+    "type": "concept_explanation"
+  },
+  {
+    "question_id": "Q7",
+    "question": "What do Hamlet, Macbeth, and Romeo and Juliet have in common?",
+    "expected_focus": "All three are Shakespearean tragedies sharing themes of love, death, moral failure, and the destructive consequences of ambition or passion.",
+    "type": "contextual_qa"
+  },
+  {
+    "question_id": "Q8",
+    "question": "What does Romeo say when he first meets Juliet?",
+    "expected_focus": "Romeo's opening sonnet to Juliet in Act 1, Scene 5: 'If I profane with my unworthiest hand / This holy shrine...'",
+    "type": "evidence_retrieval"
+  },
+  {
+    "question_id": "Q9",
+    "question": "What does Hamlet say in the 'To be or not to be' speech?",
+    "expected_focus": "Hamlet's Act 3, Scene 1 soliloquy on life vs. death; fear of the unknown afterlife; paralysis of will and indecision.",
+    "type": "evidence_retrieval"
+  },
+  {
+    "question_id": "Q10",
+    "question": "Write a Shakespearean-style speech from Macbeth expressing guilt after killing Duncan.",
+    "expected_focus": "Creative stylised output; Macbeth's guilt, remorse, and psychological torment after murdering Duncan.",
+    "type": "stylised_generation"
+  },
+  {
+    "question_id": "Q11",
+    "question": "Who is Macbeth?",
+    "expected_focus": "Scottish general turned king through treachery; corrupted by ambition and Lady Macbeth's influence; descends into tyranny and paranoia; killed by Macduff.",
+    "type": "concept_explanation"
+  },
+  {
+    "question_id": "Q12",
+    "question": "Who are Romeo and Juliet?",
+    "expected_focus": "Young lovers from feuding Montague and Capulet families in Verona; secretly married; both die tragically at the play's end.",
+    "type": "concept_explanation"
+  },
+  {
+    "question_id": "Q13",
+    "question": "How does Romeo and Juliet end, and why do both Romeo and Juliet die?",
+    "expected_focus": "Romeo drinks poison believing Juliet dead; Juliet kills herself finding Romeo dead; caused by failed message delivery and the Montague-Capulet feud.",
+    "type": "contextual_qa"
+  }
+]
