@@ -1,13 +1,18 @@
-# Data & Evaluation
-numpy
-pandas
-scikit-learn
-tqdm
+# ── Data & Evaluation ──────────────────────────────────────────────────────────
+numpy>=1.24,<3
+pandas>=2.0
+scikit-learn>=1.3
+tqdm>=4.65
 
-# Retrieval / Embedding
-sentence-transformers
+# ── Retrieval / Embedding ──────────────────────────────────────────────────────
+sentence-transformers>=2.7,<4
 
-# Local LLM
-torch
-transformers
-accelerate
+# ── Local LLM ─────────────────────────────────────────────────────────────────
+# torch: install the CPU-only build unless you have a CUDA / MPS GPU.
+# CPU-only (recommended for assessment):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# GPU (CUDA 12.1):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.1
+transformers>=4.40
+accelerate>=0.29

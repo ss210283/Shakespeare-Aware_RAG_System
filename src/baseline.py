@@ -4,9 +4,13 @@ The model answers solely from its pretrained knowledge — no context is injecte
 This serves as the comparison baseline for the RAG system.
 """
 
+import sys
 import torch
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Ensure src/ is on sys.path regardless of working directory
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 _LOCAL_MODEL_PATH = Path(__file__).resolve().parents[1] / "model" / "qwen2.5-1.5b-instruct"
 MODEL_NAME = str(_LOCAL_MODEL_PATH) if _LOCAL_MODEL_PATH.exists() else "Qwen/Qwen2.5-1.5B-Instruct"

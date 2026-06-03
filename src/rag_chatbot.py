@@ -6,8 +6,12 @@ Pipeline: query → retrieve → score filter → build prompt (PDR) → generat
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
+
+# Ensure src/ is on sys.path regardless of working directory
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import numpy as np
 import torch
@@ -115,6 +119,10 @@ class RAGSystem:
 
     def _apply_citation_guard(self, answer: str, is_stylised: bool) -> str:
         if is_stylised:
+            # Enforce 150-word hard limit required by the assignment spec
+            words = answer.split()
+            if len(words) > 150:
+                answer = " ".join(words[:150]) + " …"
             return f"[Creative output — not textual evidence]\n{answer}"
         return answer
 
